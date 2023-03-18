@@ -7,7 +7,7 @@ import Participant.Player;
 import Participant.Team;
 import Participant.TeamCreator;
 
-public abstract class CollectiveSport extends Sport{
+public abstract class CollectiveSport extends SportContent implements Score{
     private Team firstTeam;
     private Team secondTeam;
     public Team[] allTeams = {firstTeam, secondTeam};
