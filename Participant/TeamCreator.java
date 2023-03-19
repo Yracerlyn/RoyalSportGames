@@ -2,10 +2,9 @@ package Participant;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Deque;
-import java.util.List;
 
 public class TeamCreator {
+    private TeamCreator(){}
     public static Team[] makeTwoTeams(Collection<Player> players){
         ArrayList<Player> players2 = new ArrayList<>(players);
 
@@ -24,8 +23,8 @@ public class TeamCreator {
             secondTeam.add(players2.get(i));
         }
 
-        allTeams[0] = new Team((Collection<Player>)firstTeam);
-        allTeams[1] = new Team((Collection<Player>)secondTeam);
+        allTeams[0] = new Team(firstTeam);
+        allTeams[1] = new Team(secondTeam);
         
         return allTeams;
     }

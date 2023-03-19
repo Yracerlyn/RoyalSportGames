@@ -5,6 +5,8 @@ import java.util.Random;
 public class RandomResults {
     private static Random random = new Random();
 
+    private RandomResults(){}
+
     public static int getRandomWinner(){
         return random.nextInt(0,1);
     } 

@@ -18,10 +18,13 @@ public class BasketballOpposition extends CollectiveSport implements Basketball{
     @Override
     public void setRandomResult(){
         int randomNumber1 = RandomResults.getBaskettballRandomResult();
-        this.result.put(allTeams[0], randomNumber1);
+        System.out.println(randomNumber1);
         
         int randomNumber2 = RandomResults.getBaskettballRandomResult();
-        this.result.put(allTeams[0], randomNumber2);
+        System.out.println(randomNumber2);
+    
+        this.setResult(randomNumber1, randomNumber2);
+        
     }
 
     

@@ -4,9 +4,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class CatalogSport {
+    private CatalogSport(){}
+
     private static HashMap<Integer, ArrayList<String>> catalog;
 
     static{
+        catalog = new HashMap<>();
+
         for(int i=1; i<=7; i++){
             catalog.put(i, new ArrayList<>()); 
         }

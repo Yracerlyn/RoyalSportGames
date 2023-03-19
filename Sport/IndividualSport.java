@@ -9,7 +9,7 @@ public abstract class IndividualSport extends SportContent{
     private ArrayList<Player> classement;
     private int nbPlayerLimit;
     
-    public IndividualSport(ArrayList<Player> players, int nbPlayerLimit) {
+    protected IndividualSport(ArrayList<Player> players, int nbPlayerLimit) {
         super(players);
         this.nbPlayerLimit = nbPlayerLimit;
         this.classement = new ArrayList<>();
@@ -36,12 +36,6 @@ public abstract class IndividualSport extends SportContent{
 
     public ArrayList<Player> getClassement() {
         return classement;
-    }
-
-    public void printClassement(){
-        for(int i=1; i<=this.classement.size(); i++){
-            System.out.print("Numéro " + i + " : " + this.classement.get(i-1).getId());
-        }
     }
 
     public void setClassement(ArrayList<Player> classement){

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class RoundLimit {
-    private static HashMap<Integer, Integer> maxNumberPlayerLimit;
+    private static HashMap<Integer, Integer> maxNumberPlayerLimit = new HashMap<>();
 
     static{
         maxNumberPlayerLimit.put(1,55);

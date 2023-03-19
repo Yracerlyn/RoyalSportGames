@@ -1,8 +1,6 @@
 package Sport.Race_Content;
 
 import java.util.ArrayList;
-import java.util.Collection;
-
 import Participant.Player;
 import Sport.IndividualSport;
 

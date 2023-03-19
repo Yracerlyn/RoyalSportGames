@@ -1,19 +1,14 @@
 package Sport.CollectiveContent;
 
-import java.util.ArrayList;
-import java.util.Random;
-
+import java.util.Collection;
 import Participant.Player;
-import Participant.Team;
 import Random_Generator.RandomResults;
 import Sport.CollectiveSport;
-import Sport.SportProprieties.Basketball;
 import Sport.SportProprieties.BeachVolley;
-import Sport.SportProprieties.Volleyball;
 
 public class BeachVolleyOpposition extends CollectiveSport implements BeachVolley{
 
-    public BeachVolleyOpposition(ArrayList<Player> players) {
+    public BeachVolleyOpposition(Collection<Player> players) {
         super(players);
     }
 
@@ -21,15 +16,17 @@ public class BeachVolleyOpposition extends CollectiveSport implements BeachVolle
     public void setRandomResult(){
         if(RandomResults.getRandomWinner() == 0){
             int randomNumber1 = 3;
-            this.result.put(allTeams[0], randomNumber1);
+            this.getResult()[0] = randomNumber1;
             int randomNumber2 = RandomResults.getSetRandomResult();
-            this.result.put(allTeams[1], randomNumber2);
+            this.getResult()[1] = randomNumber2;
         }
         else{
             int randomNumber1 = 3;
-            this.result.put(allTeams[1], randomNumber1);
+            this.getResult()[1] = randomNumber1;
+
             int randomNumber2 = RandomResults.getSetRandomResult();
-            this.result.put(allTeams[0], randomNumber2);
+            this.getResult()[0] = randomNumber2;
+
         }
 
     }
