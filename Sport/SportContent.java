@@ -1,6 +1,7 @@
 package Sport;
 
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import Participant.Player;
@@ -9,6 +10,11 @@ public abstract class SportContent {
     private String name;
     private Collection<Player> players;
     private boolean matchStatus;
+
+    public SportContent(ArrayList<Player> players){
+        this.players = players;
+        this.matchStatus = false;
+    }
 
     public String getName(){
         return this.name;
@@ -30,5 +36,7 @@ public abstract class SportContent {
         this.matchStatus = true;
     }
 
-    public abstract Team getWinners();
+    public abstract Collection<Player> getWinners();
+
+    public abstract Collection<Player> getLosers();
 }

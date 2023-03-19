@@ -1,5 +1,6 @@
 package Sport.Race_Content;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import Participant.Player;
@@ -7,10 +8,10 @@ import Sport.IndividualSport;
 
 public class BikeRace extends IndividualSport {
 
-    @Override
-    public Collection<Player> getWinners() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getWinners'");
+    //implémenter un système de temps 
+
+    public BikeRace(ArrayList<Player> players, int nbPlayerLimit) {
+        super(players, nbPlayerLimit);
     }
     
 }

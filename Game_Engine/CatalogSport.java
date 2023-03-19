@@ -19,6 +19,7 @@ public class CatalogSport {
         catalog.get(4).add("kayak");
         catalog.get(4).add("running");
         catalog.get(5).add("petanque");
+        catalog.get(5).add("beachvolley");
         catalog.get(6).add("swimming");
         catalog.get(6).add("kayak");
         catalog.get(6).add("running");

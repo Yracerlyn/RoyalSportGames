@@ -1,28 +1,28 @@
 package Sport.CollectiveContent;
 
 import java.util.ArrayList;
+import java.util.Random;
+
+import Participant.Player;
+import Participant.Team;
+import Random_Generator.RandomResults;
 import Sport.CollectiveSport;
+import Sport.SportProprieties.Basketball;
 
 public class BasketballOpposition extends CollectiveSport implements Basketball{
 
-    public BasketballOpposition(){
-        super();
+    public BasketballOpposition(ArrayList<Player> players) {
+        super(players);
     }
 
-    public ArrayList<Integer> getScore(boolean teamWinner){
-        if(teamWinner){
-            int randomNumber1 = (int) (Math.random() * 150 + 1);
-            int randomNumber2 = (int) (Math.random() * 149 + 1);
-        }
-        else{
-            int randomNumber2 = (int) (Math.random() * 150 + 1);
-            int randomNumber1 = (int) (Math.random() * 149 + 1);
-        }
-        ArrayList<Integer> score = new ArrayList<>();
-        return score;
+    @Override
+    public void setRandomResult(){
+        int randomNumber1 = RandomResults.getBaskettballRandomResult();
+        this.result.put(allTeams[0], randomNumber1);
+        
+        int randomNumber2 = RandomResults.getBaskettballRandomResult();
+        this.result.put(allTeams[0], randomNumber2);
     }
-
-
 
     
 }

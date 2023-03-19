@@ -6,11 +6,12 @@ import java.util.Collection;
 import Participant.Player;
 import Sport.IndividualSport;
 
-public class KayakRace extends IndividualSport{
+public class RunRace extends IndividualSport{
 
     //implémenter un système de temps 
 
-    public KayakRace(ArrayList<Player> players, int nbPlayerLimit) {
+
+    public RunRace(ArrayList<Player> players, int nbPlayerLimit) {
         super(players, nbPlayerLimit);
     }
 

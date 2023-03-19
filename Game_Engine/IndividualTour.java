@@ -4,6 +4,7 @@ import Sport.IndividualSport;
 
 public class IndividualTour {
     private IndividualSport sport; //individuel 
+    
 
     public IndividualTour(IndividualSport sport){
         this.sport = sport;
