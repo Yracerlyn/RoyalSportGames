@@ -1,8 +1,11 @@
+package Sport;
+
+
 import java.util.Collection;
 
 import Participant.Player;
 
-public abstract class Sport {
+public abstract class SportContent {
     private String name;
     private Collection<Player> players;
     private boolean matchStatus;
@@ -27,5 +30,5 @@ public abstract class Sport {
         this.matchStatus = true;
     }
 
-    public abstract Collection<Player> getWinners();
+    public abstract Team getWinners();
 }

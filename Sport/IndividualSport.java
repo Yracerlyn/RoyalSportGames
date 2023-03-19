@@ -1,5 +1,5 @@
 package Sport;
 
-public abstract class IndividualSport extends Sport{
+public abstract class IndividualSport extends SportContent{
     
 }

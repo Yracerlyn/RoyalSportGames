@@ -2,22 +2,18 @@ package Game_Engine;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
 
 import Participant.Player;
 import Participant.Team;
 import Participant.TeamCreator;
 import Sport.CollectiveSport;
-import Sport.SportContent;
-import Sport.CollectiveContent.FootballOpposition;
+
 
 public class MatchGenerator {
     private ArrayList<Player> players;
     
-    public MatchGenerator(Collection<Player> players){
-        this.players = (ArrayList)players;
+    public MatchGenerator(ArrayList<Player> players){
+        this.players = players;
     }
     
     public CollectiveSport[] makeMatchs(int nbOfPlayers){

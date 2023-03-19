@@ -1,5 +1,5 @@
 package Sport;
 
-public interface Content {
+public interface Score {
     
 }
