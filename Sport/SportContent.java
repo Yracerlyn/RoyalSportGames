@@ -1,9 +1,6 @@
 package Sport;
 
-
-import java.util.ArrayList;
 import java.util.Collection;
-
 import Participant.Player;
 
 public abstract class SportContent {
@@ -11,7 +8,7 @@ public abstract class SportContent {
     private Collection<Player> players;
     private boolean matchStatus;
 
-    public SportContent(ArrayList<Player> players){
+    protected SportContent(Collection<Player> players){
         this.players = players;
         this.matchStatus = false;
     }

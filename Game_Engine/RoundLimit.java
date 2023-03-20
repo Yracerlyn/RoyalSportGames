@@ -1,9 +1,10 @@
 package Game_Engine;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class RoundLimit {
+    private RoundLimit(){}
+
     private static HashMap<Integer, Integer> maxNumberPlayerLimit = new HashMap<>();
 
     static{

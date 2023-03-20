@@ -10,7 +10,7 @@ public abstract class DuelSport extends SportContent{
     private ArrayList<Player> finalPlayers;
     private int[] result = new int[2];
     
-    public DuelSport(ArrayList<Player> players) {
+    protected DuelSport(ArrayList<Player> players) {
         super(players);
         this.finalPlayers = players;
         

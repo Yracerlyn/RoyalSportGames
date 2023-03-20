@@ -1,6 +1,5 @@
 package Sport;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import Participant.Player;
 import Participant.Team;
@@ -13,7 +12,7 @@ public abstract class CollectiveSport extends SportContent{
     private Team[] allTeams = {firstTeam, secondTeam};
     private int[] result = new int[2];
 
-    public CollectiveSport(ArrayList<Player> players){
+    protected CollectiveSport(Collection<Player> players){
         super(players);
         this.allTeams = TeamCreator.makeTwoTeams(this.getPlayers());
         
