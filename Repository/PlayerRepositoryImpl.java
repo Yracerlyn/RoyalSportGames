@@ -17,7 +17,7 @@ public class PlayerRepositoryImpl implements PlayerRepository {
     public void createPlayer(Player player) {
         try{
             // Préparer la requête d'insertion dans la base de données
-            String sql = "INSERT INTO users (name, username, age) VALUES (nom, prenom, age)";
+            String sql = "INSERT INTO users (name, username, age) VALUES (:1, :2, :3)";
             PreparedStatement statement = connection.prepareStatement(sql);
 
             // Définir les paramètres de la requête avec les valeurs de l'utilisateur
@@ -35,14 +35,12 @@ public class PlayerRepositoryImpl implements PlayerRepository {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+
     }
 
-    @Override
-    public Player getUserByUsername(String username) {
-        // Code pour récupérer un utilisateur par son nom d'utilisateur
-        // depuis la base de données en utilisant la connexion à la base de données
-        // ...
-        return player;
+    public Connection getConnection(){
+        return connection;
     }
 
 

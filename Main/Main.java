@@ -1,5 +1,6 @@
 package Main;
 
+import java.sql.DriverManager;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -8,6 +9,8 @@ import Game_Engine.MatchGenerator;
 import Game_Engine.RoundLimit;
 import Participant.Player;
 import Random_Generator.RandomClassement;
+import Repository.PlayerRepository;
+import Repository.PlayerRepositoryImpl;
 import Sport.CollectiveSport;
 import Sport.DuelSport;
 import Sport.IndividualSport;
@@ -85,6 +88,12 @@ public class Main {
         }
 
         System.out.println(players.get(0).getId() + "a gagné");
+
+        Player player = new Player(5,"blaba", "blala", 20);
+        PlayerRepositoryImpl playerrepo = new PlayerRepositoryImpl(DriverManager.getConnection("jdbc:mysql://localhost:3306/RoyalSportGames", "root", "root"));
+        playerrepo.createPlayer(player);
+
+
         
     }
 }
