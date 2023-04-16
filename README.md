@@ -25,3 +25,5 @@ Application pour Un Royal Sport Game.
     - Le sixième tour opposera ces 6 derniers joueurs dans un match de Natation ou de Kayak ou encore de course à pieds. Seul deux joueurs seront qualifiés pour le porchain tour.
 
     Et ainsi il ne reste plus que 2 joueurs. Ces deux derniers joueurs s'affronteront dans un match de tennis de table pour définir le "Grand WINNER" du RoyalSportsGame.
+
+    La compétition se lance grâce au Main. La clé pour se connecter est "competition".

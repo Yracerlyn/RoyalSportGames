@@ -19,7 +19,7 @@ public class RoundResult {
     }
 
     public Collection<Player> getLosers() {
-        return losers;
+        return this.losers;
     }
 
     public String getSportName() {
@@ -27,7 +27,7 @@ public class RoundResult {
     }
 
     public Collection<Player> getWinners() {
-        return winners;
+        return this.winners;
     }
 
     public void setLosers(Collection<Player> losers) {

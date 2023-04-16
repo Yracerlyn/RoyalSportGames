@@ -10,44 +10,17 @@ public class RoyalSportGamesCompetition {
     private RoundResult[] roundResults;
     private Player finalWinner;
 
-    //injection de dépendance
-    private RoundHandler roundHandler;
-
     public RoyalSportGamesCompetition(){
         this.roundResults = new RoundResult[7];
         this.currentPlayers = new ArrayList<>();
         this.currentRound = 1;
-
-        this.roundHandler = new RoundHandler(this);
-
-    }
-
-    public void initialisationPlayers(){
-        for(int i=1; i<=110; i++){
-            this.currentPlayers.add(new Player(i));
-        }
     }
 
     public void setRoundResult(String nameSport, int round, Collection<Player> winners, Collection<Player> losers){
         this.roundResults[this.currentRound - 1] = new RoundResult(nameSport, this.currentRound);
         this.roundResults[round - 1].setWinners(winners);
         this.roundResults[round - 1].setLosers(losers);
-    }
-
-    public static void main(String[] args) {
-        RoyalSportGamesCompetition compet = new RoyalSportGamesCompetition();
-        compet.initialisationPlayers();
-
-        while(compet.currentPlayers.size() > 1){
-            compet.roundHandler.startRound();
-            compet.roundHandler.goToNextRound();
-        }
-
-        compet.setFinalWinner();
-  
-        System.out.println("Joueur " + compet.getFinalWinner().getId() + " a gagné");
-
-        }           
+    }    
 
     public int getNumberOfPlayerInGame(){
         return this.currentPlayers.size();
@@ -71,6 +44,14 @@ public class RoyalSportGamesCompetition {
 
     public int getCurrentRound() {
         return this.currentRound;
+    }
+
+    public RoundResult[] getRoundResults() {
+        return this.roundResults;
+    }
+
+    public RoundResult getRoundResult(int round){
+        return this.roundResults[round - 1];
     }
 
     public void setFinalWinner() {

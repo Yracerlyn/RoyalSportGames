@@ -13,5 +13,7 @@ public class Team {
         return this.players;
     }
 
-
+    public int size() {
+        return this.players.size();
+    }
 }

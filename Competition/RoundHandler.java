@@ -1,6 +1,7 @@
 package Competition;
 
 import java.util.Collection;
+import java.util.ArrayList;
 
 import Game_Engine.CatalogSport;
 import Participant.Player;
@@ -41,8 +42,11 @@ public class RoundHandler {
     }
 
     private void updateCurrentPlayers(){
-        Collection<Player> winners = this.competition.getWinnersOfLastRound();
-        this.competition.setPlayers(winners);
+        Collection<Player> currentPlayers = new ArrayList<>();
+        for(Player player : this.competition.getWinnersOfLastRound()){
+            currentPlayers.add(player);
+        }
+        this.competition.setPlayers(currentPlayers);
     }
 
     private void setNextRound(){
